@@ -2,7 +2,7 @@
 const config = {
   // Solidity 配置 - 简化格式
   solidity: {
-    version: "0.8.20",
+    version: "0.8.28",
     settings: {
       optimizer: {
         enabled: true,

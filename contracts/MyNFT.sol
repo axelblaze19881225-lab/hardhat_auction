@@ -14,7 +14,7 @@ contract MyNFT is ERC721, ERC721URIStorage, Ownable{
 
     constructor() 
         ERC721("MyNFT", "MNFT") 
-        Ownable() 
+        Ownable(msg.sender) 
     {}
 
     function safeMint(address to, string memory uri) public onlyOwner returns (uint256) {
@@ -23,10 +23,6 @@ contract MyNFT is ERC721, ERC721URIStorage, Ownable{
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
         return tokenId;
-    }
-
-     function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
-        super._burn(tokenId);
     }
 
     function batchMint(address to, string[] memory uris) public onlyOwner returns (uint256[] memory) {
