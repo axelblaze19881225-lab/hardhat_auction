@@ -1,5 +1,3 @@
-import "@nomicfoundation/hardhat-toolbox";
-import "@openzeppelin/hardhat-upgrades";
 
 const config = {
   // Solidity 配置 - 简化格式
