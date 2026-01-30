@@ -5,21 +5,18 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts-4.9.6/utils/Counters.sol";
 
-contract MyNFT is ERC721, ERC721URIStorage, Ownable{
-    using Counters for Counters.Counter;
-    
-    Counters.Counter private _tokenIdCounter;
+contract MyNFT is ERC721, ERC721URIStorage, Ownable {
+    uint256 private _tokenIdCounter;
 
-    constructor() 
-        ERC721("MyNFT", "MNFT") 
-        Ownable(msg.sender) 
+    constructor()
+        ERC721("MyNFT", "MNFT")
+        Ownable(msg.sender)
     {}
 
     function safeMint(address to, string memory uri) public onlyOwner returns (uint256) {
-        uint256 tokenId = _tokenIdCounter.current();
-        _tokenIdCounter.increment();
+        uint256 tokenId = _tokenIdCounter;
+        _tokenIdCounter++;
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
         return tokenId;

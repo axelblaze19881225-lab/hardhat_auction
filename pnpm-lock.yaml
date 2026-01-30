@@ -14,6 +14,12 @@ importers:
       '@nomicfoundation/hardhat-toolbox-mocha-ethers':
         specifier: ^3.0.2
         version: 3.0.2(@nomicfoundation/hardhat-ethers-chai-matchers@3.0.2(ethers@6.16.0)(hardhat@3.1.5))(@nomicfoundation/hardhat-ignition@3.0.7(hardhat@3.1.5))(@nomicfoundation/hardhat-keystore@3.0.3(hardhat@3.1.5))(@nomicfoundation/hardhat-mocha@3.0.9(hardhat@3.1.5)(mocha@10.8.2))(@nomicfoundation/hardhat-typechain@3.0.1(ethers@6.16.0)(hardhat@3.1.5)(typescript@5.9.3))(@nomicfoundation/ignition-core@3.0.7)(ethers@6.16.0)(hardhat@3.1.5)(mocha@10.8.2)
+      '@openzeppelin/contracts':
+        specifier: ^5.4.0
+        version: 5.4.0
+      '@openzeppelin/contracts-upgradeable':
+        specifier: ^5.4.0
+        version: 5.4.0(@openzeppelin/contracts@5.4.0)
     devDependencies:
       '@nomicfoundation/hardhat-toolbox':
         specifier: ^5.0.0
@@ -519,6 +525,14 @@ packages:
   '@nomicfoundation/solidity-analyzer@0.1.2':
     resolution: {integrity: sha512-q4n32/FNKIhQ3zQGGw5CvPF6GTvDCpYwIf7bEY/dZTZbgfDsHyjJwURxUJf3VQuuJj+fDIFl4+KkBVbw4Ef6jA==}
     engines: {node: '>= 12'}
+
+  '@openzeppelin/contracts-upgradeable@5.4.0':
+    resolution: {integrity: sha512-STJKyDzUcYuB35Zub1JpWW58JxvrFFVgQ+Ykdr8A9PGXgtq/obF5uoh07k2XmFyPxfnZdPdBdhkJ/n2YxJ87HQ==}
+    peerDependencies:
+      '@openzeppelin/contracts': 5.4.0
+
+  '@openzeppelin/contracts@5.4.0':
+    resolution: {integrity: sha512-eCYgWnLg6WO+X52I16TZt8uEjbtdkgLC0SUX/xnAksjjrQI4Xfn4iBRoI5j55dmlOhDv1Y7BoR3cU7e3WWhC6A==}
 
   '@scure/base@1.1.9':
     resolution: {integrity: sha512-8YKhl8GHiNI/pU2VMaofa2Tor7PJRAjwQLBBuilkJ9L5+13yVbC7JO/wS7piioAvPSwR3JKM1IJ/u4xQzbcXKg==}
@@ -2532,6 +2546,12 @@ snapshots:
       '@nomicfoundation/solidity-analyzer-linux-x64-gnu': 0.1.2
       '@nomicfoundation/solidity-analyzer-linux-x64-musl': 0.1.2
       '@nomicfoundation/solidity-analyzer-win32-x64-msvc': 0.1.2
+
+  '@openzeppelin/contracts-upgradeable@5.4.0(@openzeppelin/contracts@5.4.0)':
+    dependencies:
+      '@openzeppelin/contracts': 5.4.0
+
+  '@openzeppelin/contracts@5.4.0': {}
 
   '@scure/base@1.1.9': {}
 
